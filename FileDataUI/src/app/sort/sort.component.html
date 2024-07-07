@@ -1,0 +1,14 @@
+<div>
+    <mat-form-field>
+        <mat-label>Sort By</mat-label>
+        <mat-select [(value)]="selectedSortType" (selectionChange)="onSortChange()">
+            <mat-option *ngFor="let type of sortTypes" [value]="type.value">
+                {{ type.viewValue }}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <button mat-icon-button (click)="toggleSortOrder()">
+        <mat-icon>{{ sortOrder === 'asc' ? 'arrow_upward' : 'arrow_downward' }}</mat-icon>
+    </button>
+</div>
