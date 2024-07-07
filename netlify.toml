@@ -1,11 +1,10 @@
 
 [build]
     base = "FileDataUI"
-    command = "npm run build: prod"
+    command = "npm run build:prod"
     publish = "dist/"
-build:prod"
 
 [[redirects]]
-from = "/*"*
+from = "/*"
 to = "/index.html"
 status = 200
